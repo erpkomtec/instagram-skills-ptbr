@@ -49,7 +49,7 @@ TENSAO = {
     "arrependo", "arrependi", "deveria", "devia", "ainda", "já", "só", "apenas",
     "versus", "contra", "primeiro", "parei", "larguei", "trocar", "troquei",
     "substituiu", "acabou", "acabei", "rombo", "dívida", "atrasado", "atraso",
-    "esqueci", "esquecer", "esquece", "levava", "demorava", "gastava", "virou",
+    "esqueci", "esquecer", "esquece", "esqueceu", "esquecido", "deve", "devendo", "devia", "deviam", "fiado", "calote", "atrasou", "atrasada", "atrasadas", "vencida", "vencidas", "parada", "parado", "sumiu", "sobrou", "faltou", "falta", "levava", "demorava", "gastava", "virou",
 }
 # Expressões de mais de uma palavra procuradas no texto inteiro.
 TENSAO_EXPR = ["para de", "em vez de", "de graça", "na verdade", "ninguém te"]

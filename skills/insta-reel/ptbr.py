@@ -101,13 +101,62 @@ def nomes_proprios(texto):
     return achados
 
 
+# Sílabas de cada número dito por extenso.
+_UNID = [0, 1, 1, 1, 2, 2, 1, 2, 2, 2,            # zero..nove ("um", "dois"...)
+         1, 2, 2, 2, 3, 2, 3, 4, 3, 4]            # dez..dezenove
+_DEZ = [0, 0, 2, 2, 3, 3, 3, 3, 3, 3]             # vinte..noventa
+_CEM = [0, 2, 3, 3, 4, 3, 3, 4, 4, 4]             # cento..novecentos
+
+
+def _sil_ate_999(n):
+    if n == 0:
+        return 0
+    if n == 100:
+        return 1                                   # "cem"
+    c, resto = divmod(n, 100)
+    partes = []
+    if c:
+        partes.append(_CEM[c])
+    if resto:
+        if resto < 20:
+            partes.append(_UNID[resto])
+        else:
+            d, u = divmod(resto, 10)
+            partes.append(_DEZ[d])
+            if u:
+                partes.append(_UNID[u])
+    return sum(partes) + (len(partes) - 1)        # cada "e" é uma sílaba
+
+
+def silabas_inteiro(n):
+    """Sílabas de um inteiro por extenso: 20 -> "vinte" = 2; 1250 -> "mil duzentos e cinquenta" = 8."""
+    if n == 0:
+        return 2                                   # "zero"
+    total, grupos = 0, []
+    while n:
+        n, g = divmod(n, 1000)
+        grupos.append(g)
+    nomes = [0, 1, 2, 2]                           # -, mil, milhões, bilhões
+    for i, g in enumerate(grupos):
+        if not g:
+            continue
+        if i == 1 and g == 1:
+            total += 1                             # "mil", não "um mil"
+        else:
+            total += _sil_ate_999(g) + (nomes[i] if i < len(nomes) else 2)
+    # "dois mil E vinte", "mil E trezentos"; mas "mil duzentos e cinquenta".
+    if len(grupos) > 1 and grupos[0] and (grupos[0] < 100 or grupos[0] % 100 == 0):
+        total += 1
+    return total
+
+
 def silabas_palavra(token):
     """Sílabas faladas, por aproximação.
 
     Palavra: conta grupos de vogais (ditongos contam como um; hiatos como
     "saída" contam a menos, o que dá uma margem de segurança pequena).
-    Número: estima como é dito por extenso. R$ 1.250,00 vira "mil duzentos e
-    cinquenta reais", uns 11.
+    Número: conta como é dito por extenso. R$ 1.250,00 vira "mil duzentos e
+    cinquenta reais", 10 sílabas; 20 vira "vinte", 2.
     """
     if eh_numero(token):
         dinheiro = token.startswith("R$")
@@ -116,15 +165,11 @@ def silabas_palavra(token):
         sufixo = sufixo.group(0).lower() if sufixo else ""
         corpo = re.sub(r"[%A-Za-z]+$", "", corpo)
         inteiro, _, decimais = corpo.partition(",")
-        digitos = re.sub(r"\D", "", inteiro)
-        significativos = sum(1 for d in digitos if d != "0") or 1
-        total = significativos * 3
-        if len(digitos) >= 4:
-            total += 1                      # "mil"
-        if len(digitos) >= 7:
-            total += 2                      # "milhões"
-        if decimais and set(decimais) - {"0"}:
-            total += 4                      # "e cinquenta centavos"
+        digitos = re.sub(r"\D", "", inteiro)[:15] or "0"
+        total = silabas_inteiro(int(digitos))
+        cent = int((re.sub(r"\D", "", decimais) + "00")[:2]) if decimais else 0
+        if cent:
+            total += 1 + _sil_ate_999(cent) + 3   # "e cinquenta centavos"
         if dinheiro:
             total += 2                      # "reais"
         total += {"%": 3, "h": 2, "min": 3, "x": 2, "k": 1}.get(sufixo, 0)

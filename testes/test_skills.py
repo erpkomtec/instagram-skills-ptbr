@@ -69,9 +69,21 @@ class Palavras(unittest.TestCase):
         self.assertEqual(ptbr.silabas_palavra("não"), 1)
         self.assertEqual(ptbr.silabas("Orçamento que levava cinco horas agora sai em vinte minutos."), 22)
 
-    def test_silabas_de_valor_falado(self):
-        # "mil duzentos e cinquenta reais" ~ 9-11 sílabas
-        self.assertTrue(8 <= ptbr.silabas_palavra("R$ 1.250") <= 12)
+    def test_silabas_de_numero_por_extenso(self):
+        casos = {
+            "20": 2,            # vinte
+            "21": 4,            # vinte e um
+            "100": 1,           # cem
+            "101": 4,           # cento e um
+            "1000": 1,          # mil
+            "2026": 7,          # dois mil e vinte e seis
+            "1300": 5,          # mil e trezentos
+            "R$ 1.250": 10,     # mil duzentos e cinquenta reais
+            "R$ 4,50": 11,      # quatro reais e cinquenta centavos
+            "30%": 5,           # trinta por cento
+        }
+        for token, esperado in casos.items():
+            self.assertEqual(ptbr.silabas_palavra(token), esperado, token)
 
     def test_nome_proprio_ignora_inicio_de_frase(self):
         self.assertEqual(ptbr.nomes_proprios("Hoje fui a Goiânia. Depois voltei."), ["Goiânia"])

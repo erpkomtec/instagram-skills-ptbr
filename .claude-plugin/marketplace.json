@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "instagram-skills-ptbr",
+  "description": "Skills do Claude para Instagram em português do Brasil",
+  "owner": { "name": "ERP KomTec Pro", "url": "https://erpkomtec.com.br" },
+  "plugins": [
+    {
+      "name": "instagram-skills-ptbr",
+      "description": "Roteiro de Reel com nota do gancho, mapa de tempos por sílaba, .srt para o CapCut, moldura 9:16 e conferência de legenda.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/erpkomtec/instagram-skills-ptbr"
+    }
+  ]
+}

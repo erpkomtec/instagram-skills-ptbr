@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+# arquivos pessoais e saídas geradas não vão para o repositório
+voz.md
+!modelos/voz.md
+*.srt
+moldura-reel-9x16.png
+registro.md

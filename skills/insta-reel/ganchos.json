@@ -1,0 +1,302 @@
+{
+  "versao": "1.0-ptbr",
+  "nota": "26 fórmulas de gancho para Reels, adaptadas do original em inglês para o português do Brasil. Um Reel tem dois ganchos que disparam juntos e não são a mesma frase: o que você FALA primeiro e o que aparece ESCRITO na tela primeiro. O falado tem uns dois segundos; o da tela tem um, porque é lido antes de ser ouvido. Cada fórmula traz o modelo, um exemplo preenchido, a versão para a tela, para que serve e como costuma ser estragada. O campo `reconhece` é uma expressão regular (sem diferenciar maiúsculas) para identificar a fórmula num gancho já escrito; percorra na ordem de `ordem_classificacao`, da mais específica para a mais genérica.",
+  "regras": [
+    "Escreva a fala e a cartela separadas. Na tela vai a versão mais curta e seca: seis palavras ou menos, sem pontuação desnecessária.",
+    "Sem preparação. O vídeo começa na frase que você normalmente diria no sexto segundo.",
+    "Diga o número. 'Muito' não é número e 'um tempão' também não.",
+    "O primeiro quadro também é gancho. Rosto parado em 0:00, sem movimento e sem texto, são três ganchos desperdiçados.",
+    "Se o gancho serviria para qualquer concorrente do seu ramo, ele não é seu. Coloque nele a coisa que só você pode dizer.",
+    "Gancho é promessa. Entregue antes da metade do vídeo, senão a atenção que você comprou vai embora."
+  ],
+  "ganchos": [
+    {
+      "id": 1,
+      "nome": "Confissão de custo",
+      "modelo": "{Valor exato} foi o que {um erro} me custou.",
+      "exemplo": "R$ 18 mil foi o que uma cláusula esquecida me custou.",
+      "tela": "ERRO DE R$ 18 MIL",
+      "serve_para": "Confiança rápida. As pessoas terminam os vídeos em que quem se deu mal foi você.",
+      "armadilha": "Custo de mentira. 'Me custou minha paz' não é número e todo mundo percebe.",
+      "reconhece": "R\\$\\s?\\d[\\d.,]*(?:\\s?mil)?\\s+(?:foi|é) o que\\b|\\bme custou\\b|\\bnos custou\\b|\\bperdi\\b[^.!?]{0,25}R\\$\\s?\\d"
+    },
+    {
+      "id": 2,
+      "nome": "Ordem negativa",
+      "modelo": "Pare de {hábito comum}. Faça {alternativa}.",
+      "exemplo": "Pare de mandar orçamento em Word. Mande o PDF direto no WhatsApp.",
+      "tela": "PARE DE USAR WORD",
+      "serve_para": "Salvamentos e discussão nos comentários. Uma ordem chama mais atenção do que uma afirmação.",
+      "armadilha": "Mandar parar algo que ninguém faz. O hábito tem que ser um que a pessoa reconhece em si mesma.",
+      "reconhece": "^\\s*(?:pare|para de|chega de|nunca|não (?:faça|use|mande|compre|cobre|poste))\\b|\\bpara de (?:fazer|usar|mandar|comprar|cobrar|postar)\\b"
+    },
+    {
+      "id": 3,
+      "nome": "Ninguém te conta",
+      "modelo": "Ninguém te conta que {verdade incômoda} quando você {situação}.",
+      "exemplo": "Ninguém te conta que o maior custo da oficina é a peça parada no estoque.",
+      "tela": "NINGUÉM TE CONTA",
+      "serve_para": "Posicionar você como quem já passou pela situação.",
+      "armadilha": "A 'verdade' ser óbvia. Se todo mundo já sabe, não era segredo.",
+      "reconhece": "\\bningu[eé]m (?:te |lhe )?(?:conta|fala|avisa|explica|diz)\\b|\\bo que (?:não )?te contam\\b|\\bo que ningu[eé]m\\b"
+    },
+    {
+      "id": 4,
+      "nome": "A substituição",
+      "modelo": "Troquei {ferramenta/hábito antigo} por {novo}. {Resultado}.",
+      "exemplo": "Troquei a planilha de estoque por um leitor de código de barras. Inventário em uma tarde.",
+      "tela": "PLANILHA -> LEITOR",
+      "serve_para": "Quem ainda usa o jeito antigo se reconhece na hora.",
+      "armadilha": "Virar propaganda. O foco é o antes e depois de quem usa, não a marca.",
+      "reconhece": "\\btroquei\\b|\\bsubstitu[ií]\\w*\\b|\\bno lugar d[ea]\\b|\\bem vez de\\b|\\blarguei\\b"
+    },
+    {
+      "id": 5,
+      "nome": "Tempo encolhido",
+      "modelo": "{Tarefa} levava {tempo longo}. Agora leva {tempo curto}.",
+      "exemplo": "Orçamento levava cinco horas. Agora sai em vinte minutos.",
+      "tela": "5 HORAS -> 20 MIN",
+      "serve_para": "Ganho de produtividade que dá para conferir. O contraste dos dois números faz o trabalho.",
+      "armadilha": "Números inacreditáveis. 'De 3 dias para 3 segundos' faz a pessoa desconfiar do resto.",
+      "reconhece": "\\b(?:levava|demorava|gastava)\\b[^!?]{0,50}\\b(?:agora|hoje)\\b|\\bde \\d+\\s?\\w*\\s+(?:para|pra)\\s+\\d+|\\d+\\s?(?:h|horas?|dias?|min\\w*)\\s*(?:->|→|para|pra)\\s*\\d+"
+    },
+    {
+      "id": 6,
+      "nome": "O comprovante",
+      "modelo": "Isso aqui é {prova na tela}. {O que ela mostra}.",
+      "exemplo": "Isso aqui é o extrato do mês que a gente quase fechou no vermelho.",
+      "tela": "O EXTRATO REAL",
+      "serve_para": "Prova visual no primeiro quadro. Funciona sem som.",
+      "armadilha": "Mostrar dado de cliente ou valor sigiloso. Borre o que não pode aparecer.",
+      "reconhece": "^\\s*(?:isso aqui é|esse é o|esta é a|olha (?:esse|essa|o|a))\\b[^.!?]{0,30}\\b(?:extrato|print|nota|planilha|relatório|boleto|recibo|resultado)\\b"
+    },
+    {
+      "id": 7,
+      "nome": "Jeito errado, jeito certo",
+      "modelo": "Jeito errado: {comum}. Jeito certo: {melhor}.",
+      "exemplo": "Jeito errado de dar desconto: no total. Jeito certo: por item, com limite por vendedor.",
+      "tela": "ERRADO x CERTO",
+      "serve_para": "Comparação em tela dividida. Fácil de entender sem áudio.",
+      "armadilha": "O 'certo' ser só opinião sua. Mostre o porquê com um número.",
+      "reconhece": "\\bjeito (?:errado|certo)\\b|\\bforma (?:errada|certa)\\b|\\berrado\\b[^.!?]{0,40}\\bcerto\\b"
+    },
+    {
+      "id": 8,
+      "nome": "Bastidor",
+      "modelo": "Trabalho com {área} há {tempo}. O que {grupo} não te mostra é {fato}.",
+      "exemplo": "Vendo peça de trator há 15 anos. O que o balcão não te mostra é a margem real.",
+      "tela": "15 ANOS NO BALCÃO",
+      "serve_para": "Autoridade de quem está dentro do ramo.",
+      "armadilha": "Prometer bastidor e entregar o que está no site de qualquer um.",
+      "reconhece": "\\b(?:trabalho|atuo|vendo|estou) (?:com|no|na|em)?\\s?[^.!?]{0,30}\\bh[aá] \\d+\\s?anos\\b|\\bpor dentro\\b|\\bbastidor(?:es)?\\b"
+    },
+    {
+      "id": 9,
+      "nome": "Pode copiar",
+      "modelo": "Copia {modelo/checklist} que {resultado}.",
+      "exemplo": "Copia esse checklist de entrega técnica que acabou com a volta de máquina.",
+      "tela": "COPIA ESSE CHECKLIST",
+      "serve_para": "Salvamentos. A pessoa guarda para usar depois.",
+      "armadilha": "Oferecer modelo e não mostrar na tela. Ele tem que aparecer legível.",
+      "reconhece": "^\\s*(?:copi[ae]|pega|rouba|salva)\\b|\\bpode copiar\\b"
+    },
+    {
+      "id": 10,
+      "nome": "Se isso, assista",
+      "modelo": "Se você {situação específica}, assiste até o final.",
+      "exemplo": "Se você ainda controla fiado no caderno, assiste até o final.",
+      "tela": "AINDA USA CADERNO?",
+      "serve_para": "Filtrar o público certo no primeiro segundo.",
+      "armadilha": "Situação genérica ('se você tem empresa') não filtra ninguém.",
+      "reconhece": "^\\s*se (?:você|vocês|tu)\\b[^.!?]{0,60}\\b(?:assist\\w+|fica|veja|não pula)\\b"
+    },
+    {
+      "id": 11,
+      "nome": "Lista com favorito",
+      "modelo": "{N} {coisas} para {objetivo}. A {número} é a que mais uso.",
+      "exemplo": "3 relatórios que todo dono de loja devia abrir na segunda. O terceiro é o que eu mais uso.",
+      "tela": "3 RELATÓRIOS DE SEGUNDA",
+      "serve_para": "Retenção: a pessoa espera chegar no favorito.",
+      "armadilha": "Lista longa demais. Mais de 5 itens vira carrossel, não Reel.",
+      "reconhece": "^\\s*\\d+\\s+\\w+[^.!?]{0,50}\\b(?:a|o) (?:primeir|segund|terceir|quart|quint|últim)\\w*\\b|\\bo que (?:eu )?mais uso\\b"
+    },
+    {
+      "id": 12,
+      "nome": "A objeção",
+      "modelo": "\"{Objeção que você ouve}.\" {Resposta curta}.",
+      "exemplo": "\"Sistema é caro.\" Caro é perder venda por não saber o estoque.",
+      "tela": "\"SISTEMA É CARO\"",
+      "serve_para": "Responder a dúvida que trava a venda, em público.",
+      "armadilha": "Responder com raiva ou ironia. A pessoa que pensa assim está assistindo.",
+      "reconhece": "^\\s*[\"“][^\"”]{3,60}[\"”]\\s|\\bmas (?:é|e) caro\\b|\\bnão tenho tempo\\b"
+    },
+    {
+      "id": 13,
+      "nome": "Antes e depois na tela",
+      "modelo": "{Antes, mostrado}. {Depois, mostrado}.",
+      "exemplo": "Assim era o estoque. Assim ficou depois do inventário.",
+      "tela": "ANTES / DEPOIS",
+      "serve_para": "Transformação visual. O corte entre as duas imagens é o gancho.",
+      "armadilha": "Antes e depois que não dá para comparar (ângulo, luz e lugar diferentes).",
+      "reconhece": "\\bantes\\b[^.!?]{0,40}\\bdepois\\b|\\bassim (?:era|estava|ficou)\\b"
+    },
+    {
+      "id": 14,
+      "nome": "O chamado",
+      "modelo": "{Público específico}, isso é para você.",
+      "exemplo": "Dono de oficina que perde peça entre um serviço e outro, isso é com você.",
+      "tela": "DONO DE OFICINA",
+      "serve_para": "Quando o público é estreito e se reconhece pelo nome.",
+      "armadilha": "Chamar um público grande demais ('empreendedores').",
+      "reconhece": "\\b(?:isso|esse vídeo|esse recado) (?:é|e) (?:para|pra|com) (?:você|vocês)\\b|^\\s*(?:dono|dona|donos|quem tem)\\b[^.!?]{0,60},"
+    },
+    {
+      "id": 15,
+      "nome": "Registro do fracasso",
+      "modelo": "Eu {errei/perdi} {algo concreto}. Foi assim.",
+      "exemplo": "Emiti 40 notas com a alíquota errada. Foi assim que descobri.",
+      "tela": "40 NOTAS ERRADAS",
+      "serve_para": "Vulnerabilidade com número. Gera muitos comentários.",
+      "armadilha": "Fracasso sem lição. Tem que terminar com o que mudou.",
+      "reconhece": "\\b(?:errei|perdi|quebrei|falhei|fali|faliu|deu errado|me ferrei)\\b|^\\s*(?:emiti|mandei|vendi|comprei|paguei)\\b[^.!?]{0,40}\\berrad[ao]s?\\b"
+    },
+    {
+      "id": 16,
+      "nome": "A pergunta literal",
+      "modelo": "\"{Pergunta exata que um cliente fez}?\"",
+      "exemplo": "\"Dá para tirar nota de serviço pelo celular?\" Dá. Olha.",
+      "tela": "DÁ PELO CELULAR?",
+      "serve_para": "Responder dúvidas reais. Aparece em busca.",
+      "armadilha": "Inventar pergunta. Use as que chegam no direct e no WhatsApp.",
+      "reconhece": "^\\s*[\"“]?[^.!?]{5,80}\\?[\"”]?\\s*(?:dá|sim|não|pode|tem)\\b"
+    },
+    {
+      "id": 17,
+      "nome": "Frente a frente",
+      "modelo": "{A} contra {B}. {Qual vence e por quê}.",
+      "exemplo": "Boleto contra Pix cobrança: qual chega primeiro no caixa da loja?",
+      "tela": "BOLETO x PIX",
+      "serve_para": "Decisões que o público precisa tomar. Gera debate.",
+      "armadilha": "Comparação injusta para forçar o resultado.",
+      "reconhece": "\\b(?:contra|versus|vs\\.?|x)\\b[^.!?]{0,40}\\b(?:qual|quem)\\b|^\\s*\\w+\\s+(?:x|vs\\.?|versus|contra)\\s+\\w+"
+    },
+    {
+      "id": 18,
+      "nome": "Demonstração direta",
+      "modelo": "(Sem fala de abertura: a tela já começa fazendo a coisa.)",
+      "exemplo": "Cliente, item, desconto, enviar. [o orçamento sai em tela]",
+      "tela": "ORÇAMENTO EM 1 MIN",
+      "serve_para": "Produto que se explica sozinho. Ótimo para demonstração de sistema.",
+      "armadilha": "Tela lenta ou cheia de cliques mortos. Corte toda espera.",
+      "reconhece": "^\\s*(?:olha|vê|repara|assim)\\s*[:.]|^\\s*\\[(?:tela|demonstra)|^\\s*(?:\\w+,\\s*){2,}\\w+[.!]"
+    },
+    {
+      "id": 19,
+      "nome": "O prazo",
+      "modelo": "Até {data}, {quem} precisa {fazer algo}.",
+      "exemplo": "Até 31 de janeiro, toda empresa do Simples precisa conferir isso.",
+      "tela": "ATÉ 31/01",
+      "serve_para": "Urgência real (imposto, lei, campanha).",
+      "armadilha": "Prazo inventado. Urgência falsa queima o perfil.",
+      "reconhece": "\\baté (?:o dia |dia )?\\d{1,2}(?:/\\d{1,2}| de \\w+)\\b|\\bprazo\\b|\\bvence (?:dia|em|amanhã|hoje)\\b|\\bsó até\\b"
+    },
+    {
+      "id": 20,
+      "nome": "Permissão",
+      "modelo": "Você não precisa {coisa que a pessoa acha obrigatória}.",
+      "exemplo": "Você não precisa de contador para emitir sua primeira nota de serviço.",
+      "tela": "VOCÊ NÃO PRECISA",
+      "serve_para": "Tirar um peso de cima do público. Gera alívio e compartilhamento.",
+      "armadilha": "Dar permissão para algo errado ou ilegal.",
+      "reconhece": "\\b(?:você|vocês) não precisa\\w*\\b|\\bnão (?:é|e) obrigat[oó]rio\\b|\\bpode (?:parar|esquecer)\\b"
+    },
+    {
+      "id": 21,
+      "nome": "Começo no meio da frase",
+      "modelo": "...{continuação, como se o vídeo já estivesse rolando}.",
+      "exemplo": "...e foi aí que a gente descobriu que o estoque estava errado desde março.",
+      "tela": "(sem cartela, só o corte)",
+      "serve_para": "Curiosidade: a pessoa quer saber o que veio antes.",
+      "armadilha": "Usar sempre. Funciona porque é raro.",
+      "reconhece": "^\\s*(?:\\.\\.\\.|…|e foi (?:aí|ai)|e (?:aí|ai|então))\\b"
+    },
+    {
+      "id": 22,
+      "nome": "Virada contrária",
+      "modelo": "Todo mundo fala {conselho comum}. {Por que está errado}.",
+      "exemplo": "Todo mundo fala para dar desconto à vista. Na minha loja, isso derrubou a margem.",
+      "tela": "DESCONTO À VISTA?",
+      "serve_para": "Posição forte que separa você da manada.",
+      "armadilha": "Ser contra só por ser. Precisa de prova.",
+      "reconhece": "\\btodo mundo (?:fala|diz|manda|acha)\\b|\\bnão (?:é|e) bem assim\\b|\\bao contrário\\b|\\bimpopular\\b"
+    },
+    {
+      "id": 23,
+      "nome": "A estatística",
+      "modelo": "{Número}% de {grupo} {fato surpreendente}.",
+      "exemplo": "Sete em cada dez orçamentos que a gente perdia eram por demora na resposta.",
+      "tela": "7 EM CADA 10",
+      "serve_para": "Credibilidade instantânea, se o número for seu ou tiver fonte.",
+      "armadilha": "Estatística sem fonte. Se não é seu dado, diga de onde veio.",
+      "reconhece": "\\b\\d+[.,]?\\d*\\s?%|\\b(?:\\d+|um|dois|três|sete|oito|nove) em cada (?:\\d+|dez|cem)\\b|\\bpor cento\\b"
+    },
+    {
+      "id": 24,
+      "nome": "A revelação",
+      "modelo": "O motivo de {problema} não é {suspeito óbvio}. É {verdadeiro}.",
+      "exemplo": "O motivo da sua loja não ter caixa não é a venda. É o prazo que você dá.",
+      "tela": "NÃO É A VENDA",
+      "serve_para": "Mudar a explicação que a pessoa tinha na cabeça.",
+      "armadilha": "Revelação que não revela. O 'verdadeiro' tem que surpreender.",
+      "reconhece": "\\bo (?:motivo|problema|segredo)\\b[^.!?]{0,50}\\bnão (?:é|e)\\b|\\bnão (?:é|e) [^.!?]{1,30}\\.\\s*(?:é|e)\\b"
+    },
+    {
+      "id": 25,
+      "nome": "Resultado de outra pessoa",
+      "modelo": "{Cliente/pessoa} {fez algo} e {resultado}.",
+      "exemplo": "Um cliente nosso de Rio Verde zerou o retrabalho de entrega técnica em dois meses.",
+      "tela": "ZEROU O RETRABALHO",
+      "serve_para": "Prova social sem você se gabar.",
+      "armadilha": "Expor cliente sem autorização. Peça antes, ou não diga o nome.",
+      "reconhece": "\\b(?:um|uma|meu|minha|nosso|nossa) (?:cliente|aluno|aluna|parceiro|parceira)\\b|\\bele (?:fez|conseguiu)\\b|\\bela (?:fez|conseguiu)\\b"
+    },
+    {
+      "id": 26,
+      "nome": "O superlativo",
+      "modelo": "O {maior/pior/mais caro} {coisa} que {experiência}.",
+      "exemplo": "O erro mais caro que eu vejo em loja de peças é o estoque sem custo médio.",
+      "tela": "O ERRO MAIS CARO",
+      "serve_para": "Prender pela curiosidade de saber qual é.",
+      "armadilha": "Superlativo que não se sustenta. 'O melhor sistema do mundo' afasta.",
+      "reconhece": "\\b(?:o|a) (?:\\w+ )?(?:maior|pior|melhor|menor|mais \\w+)\\b[^.!?]{0,40}\\bque\\b"
+    }
+  ],
+  "ordem_classificacao": [
+    1,
+    23,
+    5,
+    4,
+    3,
+    15,
+    20,
+    7,
+    9,
+    26,
+    25,
+    24,
+    18,
+    17,
+    8,
+    6,
+    16,
+    12,
+    10,
+    2,
+    13,
+    19,
+    21,
+    22,
+    11,
+    14
+  ]
+}

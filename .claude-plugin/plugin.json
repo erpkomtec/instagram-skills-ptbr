@@ -1,0 +1,10 @@
+{
+  "name": "instagram-skills-ptbr",
+  "description": "Skills do Claude para Instagram em português do Brasil: roteiro de Reel com nota do gancho e tempo por sílaba, legenda .srt para o CapCut, moldura de área segura e conferência de legenda. Não posta nada e não se conecta à sua conta.",
+  "version": "0.1.0",
+  "author": { "name": "ERP KomTec Pro", "url": "https://erpkomtec.com.br" },
+  "homepage": "https://github.com/erpkomtec/instagram-skills-ptbr",
+  "repository": "https://github.com/erpkomtec/instagram-skills-ptbr",
+  "license": "MIT",
+  "keywords": ["instagram", "reels", "roteiro", "legenda", "ptbr", "capcut", "marketing"]
+}

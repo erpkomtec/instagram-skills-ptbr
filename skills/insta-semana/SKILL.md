@@ -15,10 +15,13 @@ nunca em publicação**, mesmo rodando agendada e sem ninguém olhando.
 ## A ordem
 
 1. **Números.** Se houver navegador disponível e a pessoa já estiver logada,
-   leia os Insights (7 e 30 dias e posts da semana). Só leitura: não curta,
-   não comente, não envie, não mude nada. Pediu login ou confirmação? Pare a
+   leia os Insights (7 e 30 dias e posts da semana), reaproveitando **uma aba só**.
+   Não abra a página do post nem o Reel: abrir soma visualização. Só leitura: não curta,
+   não comente, não envie, não mude nada. **Confira se a conta aberta é a do
+   `voz.md`**; se não for, pare a coleta. Página só com títulos ainda está
+   carregando: leia de novo, até três vezes. Pediu login ou confirmação? Pare a
    coleta e anote. Sem navegador, use o que estiver em
-   `~/.claude/instagram/metricas.tsv` e **diga a data do dado mais novo**.
+   `~/instagram-dados/metricas.tsv` e **diga a data do dado mais novo**.
    Acrescente as leituras novas; nunca reescreva as antigas.
 2. **Testes anteriores.** Abra `testes.md`: deu certo, não deu ou falta dado?
 3. **Auditoria.** Siga a `/insta-auditoria`.
@@ -29,7 +32,7 @@ nunca em publicação**, mesmo rodando agendada e sem ninguém olhando.
 6. **Rascunhos.** Só dos dois primeiros itens do plano: `/insta-reel` ou
    `/insta-carrossel` (texto, sem gerar imagem), `/insta-legenda` e
    `/insta-humano`.
-7. **Relatório** em `~/.claude/instagram/semanas/AAAA-MM-DD.md`.
+7. **Relatório** em `~/instagram-dados/semanas/AAAA-MM-DD.md`.
 
 ## O relatório, uma página
 

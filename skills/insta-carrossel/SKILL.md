@@ -42,7 +42,7 @@ mostre as três melhores.
 
 ## O passo a passo
 
-1. Leia `~/.claude/instagram/voz.md`.
+1. Leia `~/instagram-dados/voz.md`.
 2. Escreva o texto numerado e mostre. **Só gere imagem depois do ok.**
 3. Passe `/insta-humano` no texto.
 4. Salve em `slides.txt` (slides separados por `---`), rode a conferência e

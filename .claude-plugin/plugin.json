@@ -1,7 +1,7 @@
 {
   "name": "instagram-skills-ptbr",
   "description": "14 skills do Claude para Instagram em português do Brasil: auditoria, pesquisa, plano da semana, roteiro de Reel, carrossel em PNG, legenda, Stories, perfil, respostas e direct. Não posta nada e não pede senha.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": { "name": "ERP KomTec Pro", "url": "https://erpkomtec.com.br" },
   "homepage": "https://github.com/erpkomtec/instagram-skills-ptbr",
   "repository": "https://github.com/erpkomtec/instagram-skills-ptbr",

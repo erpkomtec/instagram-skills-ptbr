@@ -65,7 +65,7 @@ Peça dois ou três termos e passe em `--buscas`.
 ## O passo a passo
 
 1. Descubra o trabalho (A ou B), o pedido único e os termos de busca.
-2. Escreva. Leia `~/.claude/instagram/voz.md` antes, se existir.
+2. Escreva. Leia `~/instagram-dados/voz.md` antes, se existir.
 3. Salve em arquivo e rode `legenda.py` com `--buscas`.
 4. Corrija toda FALHA. Para cada AVISO, corrija ou diga por que fica.
 5. Entregue a legenda num bloco de código, pronta para copiar, e a caixa do

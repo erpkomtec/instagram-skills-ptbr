@@ -1,7 +1,7 @@
 # voz.md
 
-Copie este arquivo para `~/.claude/instagram/voz.md` (no Windows:
-`C:\Users\SEU_USUARIO\.claude\instagram\voz.md`) e preencha. Todas as skills
+Copie este arquivo para `~/instagram-dados/voz.md` (no Windows:
+`C:\Users\SEU_USUARIO\instagram-dados\voz.md`) e preencha. Todas as skills
 leem este arquivo. Dez minutos aqui é a diferença entre um roteiro que você
 grava e um roteiro que você reescreve.
 

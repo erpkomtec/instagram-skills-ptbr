@@ -12,7 +12,7 @@ Sem `mediana` usa os seguidores, e a saída avisa: é uma base bem pior.
 (Usa ganchos.json e gancho.py da pasta vizinha insta-reel, se existirem.)
 
 Uso
-  python pesquisa.py coletados.tsv --saida ~/.claude/instagram/referencias.md
+  python pesquisa.py coletados.tsv --saida ~/instagram-dados/referencias.md
 """
 
 import argparse

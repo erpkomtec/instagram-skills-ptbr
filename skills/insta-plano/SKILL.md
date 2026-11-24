@@ -13,8 +13,9 @@ As outras skills executam. Esta decide o que vale executar.
 
 ## Antes
 
-Leia em `~/.claude/instagram/`, se existirem: `voz.md`, `metricas.tsv`,
-`testes.md`, `pautas.md`, `referencias.md` e `registro.md`. A evidência da
+Leia em `~/instagram-dados/`, se existirem: `voz.md`, `metricas.tsv`,
+`testes.md`, `pautas.md`, `referencias.md`, `registro.md` e `prontos.md` (o que
+já foi publicado, gravado ou roteirizado; **não proponha de novo**). A evidência da
 conta vale mais do que qualquer regra daqui. Pergunte numa mensagem só o que
 faltar:
 
@@ -60,5 +61,5 @@ textos saem de `/insta-comentario`.
 ## Saída
 
 Calendário de sete dias, soma das horas contra o disponível e checklist
-diário. Salve em `~/.claude/instagram/plano.md`. **Nada é agendado nem
+diário. Salve em `~/instagram-dados/plano.md`. **Nada é agendado nem
 publicado por aqui.**

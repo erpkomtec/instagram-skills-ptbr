@@ -26,7 +26,7 @@ em português, então reescrever é trabalho seu.
    fato no rascunho. Peça o fato.
 4. Leia em voz alta, na imaginação. Se a pessoa tropeçaria, está escrito e não
    falado.
-5. Confira com `~/.claude/instagram/voz.md`. Se a expressão apontada é
+5. Confira com `~/instagram-dados/voz.md`. Se a expressão apontada é
    mesmo dela, mantenha e sugira tirar de `vicios.json`.
 
 ## Honestidade

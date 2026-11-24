@@ -11,7 +11,7 @@ description: >-
 # insta-pesquisa
 
 ```bash
-python pesquisa.py coletados.tsv --saida ~/.claude/instagram/referencias.md
+python pesquisa.py coletados.tsv --saida ~/instagram-dados/referencias.md
 ```
 
 ## Duas fontes
@@ -50,8 +50,8 @@ e escolha as dez primeiras, com o motivo. Marque cada uma como **comprovada**
 1. Fórmulas que se repetem em cima, com a contagem.
 2. Os não classificados, lidos um a um.
 3. As dez pautas. Para as três primeiras, o gancho já na voz da pessoa
-   (`~/.claude/instagram/voz.md`), pronto para `/insta-reel` ou
+   (`~/instagram-dados/voz.md`), pronto para `/insta-reel` ou
    `/insta-carrossel`.
 
-Salve em `~/.claude/instagram/pautas.md`. Diga o tamanho da amostra: 12 Reels
+Salve em `~/instagram-dados/pautas.md`. Diga o tamanho da amostra: 12 Reels
 são pista; 40 de seis contas sustentam uma afirmação.

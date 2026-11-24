@@ -13,12 +13,12 @@ description: >-
 A única fonte honesta do que funciona numa conta é a própria conta.
 
 ```bash
-python auditoria.py ~/.claude/instagram/metricas.tsv
+python auditoria.py ~/instagram-dados/metricas.tsv
 ```
 
 ## De onde vêm os números
 
-Na ordem: o arquivo `~/.claude/instagram/metricas.tsv`, prints que a pessoa
+Na ordem: o arquivo `~/instagram-dados/metricas.tsv`, prints que a pessoa
 mandar, ou os Insights lidos no navegador **já logado por ela**, com ela
 sabendo. Nunca peça senha nem faça login. Só leia: não curta, não comente,
 não clique em publicar.
@@ -26,9 +26,10 @@ não clique em publicar.
 Alguns números (como a retenção) podem aparecer só no aplicativo do celular.
 Se não encontrar, peça um print. Anote cada leitura no TSV, com a coluna
 `horas` (idade do post na leitura). **Célula desconhecida fica vazia, nunca
-zero.** As colunas estão no topo do `auditoria.py`.
+zero**, e só entra número lido na tela: nada deduzido por conta ou eliminação.
+Use sempre o mesmo nome de post; a última linha de cada nome é a que vale. As colunas estão no topo do `auditoria.py`.
 
-Leia também `~/.claude/instagram/registro.md`, que diz qual fórmula de gancho
+Leia também `~/instagram-dados/registro.md`, que diz qual fórmula de gancho
 cada post usou.
 
 ## O que medir
@@ -57,7 +58,7 @@ Pergunte quantas são e diga isso no relatório.
 6. Feche com até três testes: o que muda, qual métrica, valor de hoje, o que
    conta como sucesso e quando conferir. Uma mudança por teste.
 
-Grave os testes em `~/.claude/instagram/testes.md` e, na auditoria seguinte,
+Grave os testes em `~/instagram-dados/testes.md` e, na auditoria seguinte,
 comece conferindo os anteriores.
 
 ## Regras

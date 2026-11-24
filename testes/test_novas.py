@@ -54,6 +54,11 @@ class Auditoria(unittest.TestCase):
         a = auditar(("A", "72", "20", "", "5", "40"), ("B", "72", "30", "", "9", "60"))
         self.assertEqual(a["topo_x_fundo"], {})
 
+    def test_leitura_repetida_conta_um_post(self):
+        a = auditar(("A", "72", "20"), ("B", "72", "30"), ("a", "90", "40"))
+        self.assertEqual(a["n"], 2)
+        self.assertEqual(a["mediana"], 35)
+
     def test_tudo_recente_nao_quebra(self):
         a = auditar(("A", "1", "20"))
         self.assertIsNone(a["mediana"])

@@ -33,7 +33,7 @@ Comentários não valem o mesmo. Separe antes de escrever e diga as contagens.
   volto aqui". Nunca invente resposta técnica.
 
 Dúvida repetida vira Reel: passe para `/insta-reel` e anote em
-`~/.claude/instagram/pautas.md`.
+`~/instagram-dados/pautas.md`.
 
 Entregue um bloco por grupo, pronto para copiar, já com `/insta-humano`. A
 pessoa publica.

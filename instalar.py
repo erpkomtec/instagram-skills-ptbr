@@ -3,7 +3,7 @@
 instalar.py - copia as skills insta-* para ~/.claude/skills.
 
 Rode de novo depois de um `git pull`. Só mexe em pastas insta-* que existem
-neste repositório. A cópia anterior vai para ~/.claude/instagram/copias-antigas.
+neste repositório. A cópia anterior vai para ~/instagram-dados/copias-antigas.
 
   python instalar.py            # instala ou atualiza
   python instalar.py --listar   # só mostra o que faria
@@ -23,7 +23,7 @@ def main():
         sys.stdout.reconfigure(encoding="utf-8")
     listar = "--listar" in sys.argv[1:]
     destino = os.path.join(CASA, "skills")
-    antigas = os.path.join(CASA, "instagram", "copias-antigas", time.strftime("%Y%m%d-%H%M%S"))
+    antigas = os.path.join(os.path.expanduser("~"), "instagram-dados", "copias-antigas", time.strftime("%Y%m%d-%H%M%S"))
     for nome in sorted(os.listdir(ORIGEM)):
         alvo = os.path.join(destino, nome)
         if not nome.startswith("insta-"):

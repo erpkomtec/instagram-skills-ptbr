@@ -46,7 +46,7 @@ O pedido vai no quadro 4: a cada toque, menos gente fica.
 **A pessoa age primeiro, você responde depois.** Quem votou ou perguntou pode
 receber resposta (`/insta-direct`). Mensagem em massa para quem não
 interagiu, nunca. As respostas da caixinha vão para
-`~/.claude/instagram/pautas.md`, sem o nome de quem escreveu.
+`~/instagram-dados/pautas.md`, sem o nome de quem escreveu.
 
 Entregue os quadros em ordem: o que aparece, o que se fala, a figurinha. Passe
 `/insta-humano`. A pessoa posta.

@@ -12,6 +12,9 @@ Entrada: arquivo separado por TAB, uma linha por post. Só `post` e
 `horas` é a idade do post quando o número foi lido. Post com menos de 48 h
 aparece, mas fica fora da mediana: ainda está rodando.
 
+Post repetido é leitura nova do mesmo post: vale a última linha. Assim o
+arquivo guarda o histórico sem inflar a amostra.
+
 Uso
   python auditoria.py posts.tsv
   python auditoria.py posts.tsv --json
@@ -59,7 +62,7 @@ def ler(texto):
             p[c] = numero(p.get(c, ""))
         if p["visualizacoes"] is not None and p.get("post"):
             posts.append(p)
-    return posts
+    return list({p["post"].casefold(): p for p in posts}.values())
 
 
 def mediana(itens, chave):

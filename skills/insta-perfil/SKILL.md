@@ -36,7 +36,7 @@ Se for perfil de empresa, logo na foto é aceitável.
 
 Passe `/insta-humano`. Entregue blocos prontos para copiar e a nota nova
 **estimada**, dizendo o que ela ainda depende. Anote a data da mudança em
-`~/.claude/instagram/testes.md`, com visitas ao perfil e toques no link de
+`~/instagram-dados/testes.md`, com visitas ao perfil e toques no link de
 antes, para comparar depois.
 
 Nada é alterado no Instagram. A pessoa edita.

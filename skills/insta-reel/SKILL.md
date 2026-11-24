@@ -28,7 +28,7 @@ python moldura.py                                 # PNG da área segura 9:16
 
 ## Antes de escrever
 
-1. Leia `~/.claude/instagram/voz.md` se existir. É o perfil de voz da pessoa:
+1. Leia `~/instagram-dados/voz.md` se existir. É o perfil de voz da pessoa:
    como fala, o que nunca diz, com quem fala, o ritmo (`--sps`). Se não
    existir, peça **três vídeos ou legendas dela**, deduza a voz e escreva o
    arquivo a partir de `modelos/voz.md`. Roteiro na voz errada não serve,
@@ -104,7 +104,7 @@ Responda "ok" para registrar, ou diga o que mudar.
 ```
 
 **8. Nunca publique.** Esta skill produz roteiro. A pessoa grava e posta. No
-"ok", acrescente em `~/.claude/instagram/registro.md` a data, a fórmula do
+"ok", acrescente em `~/instagram-dados/registro.md` a data, a fórmula do
 gancho e a primeira frase.
 
 ## Cartela é outro roteiro

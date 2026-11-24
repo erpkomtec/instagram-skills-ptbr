@@ -31,7 +31,7 @@ ele quebrava em pontos básicos:
 | — | **.srt** das falas e das cartelas para importar no CapCut |
 | — | **moldura 9:16** em PNG com a área que a interface do Instagram cobre |
 | — | **calibragem** do seu ritmo de fala (`--calibrar`) |
-| Sem testes | 50 testes automáticos |
+| Sem testes | 51 testes automáticos |
 
 ## O que tem (v0.2)
 
@@ -83,9 +83,11 @@ a cada atualização.
 **Sem Claude Code:** cole o conteúdo de um `SKILL.md` numa conversa com o
 Claude. Os scripts ficam de fora, mas as instruções funcionam.
 
-**Depois, uma vez só:** copie `modelos/voz.md` para `~/.claude/instagram/voz.md`
+**Depois, uma vez só:** copie `modelos/voz.md` para `~/instagram-dados/voz.md`
 e preencha (ou mande três vídeos seus ao Claude e peça para ele preencher).
-Todas as skills leem esse arquivo. **Ele é pessoal: não suba para repositório
+Todas as skills leem esse arquivo. (Até a v0.2.0 a pasta era
+`~/.claude/instagram`; ela é protegida pelo Claude Code e travava a rotina
+agendada. Se você já usava, mova os arquivos.) **Ele é pessoal: não suba para repositório
 público.**
 
 ## Uso rápido

@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "instagram-skills-ptbr",
-      "description": "Roteiro de Reel com nota do gancho, mapa de tempos por sílaba, .srt para o CapCut, moldura 9:16 e conferência de legenda.",
+      "description": "Auditoria, pesquisa, plano da semana, roteiro de Reel, carrossel em PNG, legenda, Stories, perfil, respostas e direct.",
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/erpkomtec/instagram-skills-ptbr"

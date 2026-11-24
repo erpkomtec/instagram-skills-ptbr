@@ -1,0 +1,18 @@
+{
+ "total": 100,
+ "nota": "Doze itens. Nota generosa não ajuda ninguém. Os pesos são julgamento editorial, não medida do Instagram.",
+ "itens": [
+  {"id": "campo_nome", "pontos": 12, "cheio": "Nome e o que faz, com palavra que se busca, em até 30 caracteres.", "falha_comum": "Só o nome, ou nome com emoji."},
+  {"id": "bio_primeira_linha", "pontos": 12, "cheio": "Diz para quem é e o que muda para essa pessoa, nas palavras dela.", "falha_comum": "Cargo, adjetivos ou emojis separados por barra."},
+  {"id": "bio_resto", "pontos": 8, "cheio": "Uma prova verdadeira ou uma oferta específica, em frase.", "falha_comum": "Lista de palavras-chave, ou vazio."},
+  {"id": "fixados", "pontos": 10, "cheio": "Três posts com trabalhos diferentes: prova, oferta explicada, apresentação.", "falha_comum": "Nada fixado."},
+  {"id": "link", "pontos": 8, "cheio": "Um destino que cumpre o que a bio prometeu; no máximo dois.", "falha_comum": "Onze opções, ou nenhum."},
+  {"id": "destaques", "pontos": 8, "cheio": "De quatro a seis, com nome de pergunta de comprador (Preço, Como funciona, Resultados).", "falha_comum": "Nomes soltos e conteúdo velho na frente."},
+  {"id": "grade", "pontos": 8, "cheio": "As nove primeiras capas se leem pequenas e dizem do que é a conta.", "falha_comum": "Reel com o primeiro quadro de capa."},
+  {"id": "foto", "pontos": 6, "cheio": "Rosto ocupando a maior parte do círculo; em empresa, logo simples e nítido.", "falha_comum": "Corpo inteiro, escuro, ou logo com texto miúdo."},
+  {"id": "arroba", "pontos": 6, "cheio": "Dá para falar em voz alta e é igual nas outras redes.", "falha_comum": "Sublinhados e números no lugar de letras."},
+  {"id": "categoria_contato", "pontos": 6, "cheio": "Conta profissional, categoria certa e botão de contato que funciona.", "falha_comum": "Conta pessoal, sem métricas."},
+  {"id": "atividade", "pontos": 10, "cheio": "Post nos últimos sete dias e comentários respondidos.", "falha_comum": "Cinco semanas parado."},
+  {"id": "stories", "pontos": 6, "cheio": "Story no ar agora ou na maioria dos dias.", "falha_comum": "Nunca."}
+ ]
+}

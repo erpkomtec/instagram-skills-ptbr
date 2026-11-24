@@ -1,13 +1,14 @@
 # instagram-skills-ptbr
 
 Skills do [Claude](https://claude.ai) para criar conteúdo de Instagram **em
-português do Brasil**: roteiro de Reel com nota do gancho, tempo medido por
-sílaba, legenda `.srt` pronta para o CapCut, moldura de área segura 9:16 e
-conferência da legenda do post.
+português do Brasil**: 14 skills que vão da auditoria do perfil ao roteiro
+de Reel com tempo por sílaba, carrossel em PNG, legenda, Stories, respostas e
+o plano da semana.
 
-**Não posta nada, não pede senha e não se conecta à sua conta.** As skills
+**Não posta nada, não pede senha e não usa API da sua conta.** As skills
 escrevem e conferem; quem grava e publica é você. Os scripts rodam no seu
-computador, só com Python, sem internet e sem instalar biblioteca.
+computador, só com Python, sem internet e sem instalar biblioteca. Para ler
+métricas, o Claude pode usar o navegador que **você** deixou logado, só leitura.
 
 Mantido pela equipe do [ERP KomTec Pro](https://erpkomtec.com.br), que usa
 estas skills para roteirizar os próprios vídeos de demonstração.
@@ -30,22 +31,38 @@ ele quebrava em pontos básicos:
 | — | **.srt** das falas e das cartelas para importar no CapCut |
 | — | **moldura 9:16** em PNG com a área que a interface do Instagram cobre |
 | — | **calibragem** do seu ritmo de fala (`--calibrar`) |
-| Sem testes | 27 testes automáticos |
+| Sem testes | 50 testes automáticos |
 
-## O que tem (v0.1)
+## O que tem (v0.2)
 
 | Comando | O que faz |
 |---|---|
-| `/insta-reel` | Da ideia ao roteiro: 3 ganchos com nota, fala, cartelas de tela, mapa de tempos e `.srt` |
-| `/insta-legenda` | Escreve e confere a legenda: o que aparece antes do "... mais", hashtags (máx. 5), uma só chamada, termos de busca |
+| `/insta-semana` | A rotina completa: números, auditoria, plano e rascunhos para aprovar |
+| `/insta-auditoria` | O que funcionou e onde trava, contra a mediana do seu perfil |
+| `/insta-pesquisa` | Dúvidas reais + Reels do nicho viram um banco de pautas |
+| `/insta-plano` | A semana dentro das horas que você tem |
+| `/insta-reel` | Da ideia ao roteiro: ganchos com nota, fala, cartelas, tempos e `.srt` |
+| `/insta-carrossel` | Texto e imagens PNG 1080x1350 |
+| `/insta-legenda` | Escreve e confere a legenda |
+| `/insta-stories` | Sequência do dia, quadro a quadro |
+| `/insta-perfil` | Nota do perfil em 12 itens e reescrita |
+| `/insta-humano` | Tira o jeito de texto de IA em português |
+| `/insta-comentario` | Comentários em posts de outras contas |
+| `/insta-resposta` | Separa e responde os comentários recebidos |
+| `/insta-direct` | Direct, convite de collab e caminho até a venda |
+| `/insta-reaproveitar` | Um conteúdo longo vira várias peças |
 
 Scripts que o Claude roda (e você também pode rodar na mão):
 
 ```
-skills/insta-reel/gancho.py      nota do gancho (0-100) em 5 propriedades
-skills/insta-reel/tempos.py      mapa de tempos por sílaba, .srt de fala e de tela, calibragem
-skills/insta-reel/moldura.py     PNG 1080x1920 com a área segura
-skills/insta-legenda/legenda.py  conferência da legenda
+skills/insta-reel/gancho.py          nota do gancho (0-100) em 5 propriedades
+skills/insta-reel/tempos.py          tempos por sílaba, .srt de fala e de tela, calibragem
+skills/insta-reel/moldura.py         PNG 1080x1920 com a área segura
+skills/insta-legenda/legenda.py      conferência da legenda
+skills/insta-auditoria/auditoria.py  múltiplo sobre a mediana, gargalo e confiança
+skills/insta-pesquisa/pesquisa.py    Reels do nicho pelo múltiplo da própria conta
+skills/insta-humano/humano.py        limpa tipografia e aponta expressões batidas
+skills/insta-carrossel/carrossel.py  confere os slides e gera os PNG (Chrome ou Edge)
 ```
 
 ## Instalação
@@ -59,8 +76,9 @@ skills/insta-legenda/legenda.py  conferência da legenda
 /plugin install instagram-skills-ptbr
 ```
 
-**Manual:** clone o repositório e copie as pastas `skills/insta-*` para
-`~/.claude/skills/` (no Windows: `C:\Users\SEU_USUARIO\.claude\skills\`).
+**Manual:** clone o repositório e rode `python instalar.py`. Ele copia as pastas
+`skills/insta-*` para `~/.claude/skills/` e guarda a cópia anterior. Rode de novo
+a cada atualização.
 
 **Sem Claude Code:** cole o conteúdo de um `SKILL.md` numa conversa com o
 Claude. Os scripts ficam de fora, mas as instruções funcionam.
@@ -106,13 +124,16 @@ No CapCut: **Texto → Legendas → Importar** e escolha o `.srt`.
   aplicativo. São margem de segurança, não encaixe exato.
 - **Nenhuma skill inventa número.** Se falta um dado, o roteiro volta com
   `{{seu número}}`.
-- **Automação de postar, comentar, seguir ou mandar direct** viola os termos
-  do Instagram e pode bloquear a conta. Por isso não existe aqui.
+- **A auditoria levanta hipóteses.** Os limites dela são ponto de partida, não
+  regra do Instagram, e com menos de 10 posts ela mesma avisa que não conclui.
+- **`/insta-humano` não é detector de IA** e não serve para esconder uso de IA: o
+  rótulo do Instagram continua valendo.
+- **Robô que comenta, segue ou dispara direct** viola os termos do Instagram e
+  pode bloquear a conta. Por isso não existe aqui. Publicar pela API oficial da
+  Meta é permitido, mas exige aplicativo próprio e fica fora deste projeto.
 
 ## Próximos passos
 
-- [ ] `/insta-carrossel`, `/insta-stories`, `/insta-perfil`, `/insta-plano`
-- [ ] `/insta-humano`: tirar o "jeito de texto de IA" em português
 - [ ] `/insta-tela`: roteiro de gravação de tela de sistema (tela, clique, zoom por fala)
 - [ ] medir a nota do gancho com Reels brasileiros reais
 

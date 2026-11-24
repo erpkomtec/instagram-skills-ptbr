@@ -1,0 +1,41 @@
+{
+ "nota": "Expressões (regex, sem diferenciar maiúsculas) que deixam texto com cara de IA em português. Edite à vontade: se a palavra é sua de verdade, tire daqui.",
+ "expressoes": [
+  {"busca": "é importante (?:destacar|ressaltar|lembrar|frisar)(?: que)?", "dica": "apague e diga direto"},
+  {"busca": "vale (?:a pena )?(?:ressaltar|destacar|lembrar)(?: que)?", "dica": "apague e diga direto"},
+  {"busca": "no mundo (?:de hoje|atual|digital)", "dica": "corte; comece pelo fato"},
+  {"busca": "nos dias (?:de hoje|atuais)", "dica": "corte; comece pelo fato"},
+  {"busca": "cada vez mais", "dica": "diga quanto"},
+  {"busca": "em constante (?:evolução|mudança|transformação)", "dica": "corte"},
+  {"busca": "diante disso|dessa forma|nesse sentido|sendo assim|ademais|outrossim", "dica": "ninguém fala assim; use então, aí, por isso"},
+  {"busca": "no que diz respeito a|no que tange", "dica": "use sobre"},
+  {"busca": "alavanc\\w+", "dica": "use aumentar, vender mais"},
+  {"busca": "potencializ\\w+", "dica": "use melhorar, e diga quanto"},
+  {"busca": "otimiz\\w+", "dica": "diga o que mudou: menos tempo, menos clique"},
+  {"busca": "impulsion(?:ar|e|a|am|ando)", "dica": "use aumentar"},
+  {"busca": "revolucion\\w+", "dica": "promessa vazia; mostre"},
+  {"busca": "transformador[ae]?s?", "dica": "diga o que muda"},
+  {"busca": "inovador[ae]?s?", "dica": "mostre a novidade"},
+  {"busca": "robust[oa]s?", "dica": "diga o que aguenta"},
+  {"busca": "disruptiv[oa]s?", "dica": "corte"},
+  {"busca": "solução completa|soluções completas", "dica": "liste o que faz"},
+  {"busca": "de forma (?:simples|rápida|eficiente|prática|inteligente)", "dica": "mostre em quantos cliques ou minutos"},
+  {"busca": "próximo nível|outro patamar", "dica": "diga o resultado"},
+  {"busca": "desvend\\w+", "dica": "use ver, entender"},
+  {"busca": "na palma da(?: sua)? mão", "dica": "batido; diga no celular"},
+  {"busca": "sem complicação|descomplicad\\w+", "dica": "mostre o passo"},
+  {"busca": "não perca tempo|não fique de fora", "dica": "pressão vazia; corte"},
+  {"busca": "você sabia que", "dica": "comece pelo fato"},
+  {"busca": "n[ea]ss?e vídeo|neste vídeo", "dica": "comece pelo resultado"},
+  {"busca": "s(?:ega|iga|egue) para mais", "dica": "peça uma coisa só, com motivo"},
+  {"busca": "marque (?:um|aquele) amigo", "dica": "isca de engajamento"},
+  {"busca": "game ?changer", "dica": "diga o que mudou"}
+ ],
+ "formas": [
+  {"busca": "\\bnão é (?:só|apenas) [^.!?\\n]{2,60}[,.;] ?(?:é|mas)\\b", "dica": "\"não é só X, é Y\": diga só o Y"},
+  {"busca": "\\bnão (?:só|apenas) [^.!?\\n]{2,60}mas também", "dica": "\"não só... mas também\": escolha um"},
+  {"busca": "^(?:o resultado|a melhor parte|o segredo)\\?", "dica": "pergunta de palco; diga logo"},
+  {"busca": "(?:^[ \\t]*[\\U0001F300-\\U0001FAFF\\u2600-\\u27BF\\u2B00-\\u2BFF][^\\n]*(?:\\n|\\Z)){3,}", "dica": "lista com emoji em toda linha"},
+  {"busca": "(?:(?:^|[ \\t])#\\w+){6,}", "dica": "mais de 5 hashtags"}
+ ]
+}
